@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Astérix",
+    "description": "Le héros courageux et rusé, prêt à défendre son village contre les envahisseurs !",
+    "price": 7.99,
+    "image": "assets/images/asterix.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Obélix",
+    "description": "L'inséparable compagnon d'Astérix, toujours fidèle et prêt à livrer des menhirs (et quelques baffes !) à ses ennemis.",
+    "price": 7.50,
+    "image": "assets/images/obelix.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Panoramix",
+    "description": "Le druide sage et mystérieux, maître de la potion magique qui donne force et courage aux Gaulois.",
+    "price": 6.50,
+    "image": "assets/images/panoramix.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Abraracourcix",
+    "description": "Le chef intrépide... sauf quand il craint que le ciel ne lui tombe sur la tête !",
+    "price": 6.99,
+    "image": "assets/images/abraracourcix.jpg"
+  }
+]

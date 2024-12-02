@@ -1,0 +1,43 @@
+<main class="container">
+  <!-- Présentation de l'entreprise -->
+  <section class="text-center my-5">
+    <h1 class="display-4">Bienvenue chez "Au Petit Village"-Le monde des irréductibles gaulois !</h1>
+    <h2>Découvrez nos figurines artisanales inspirées des aventures d'Astérix et Obélix.</h2>
+    <p class="lead">
+      Chez Au Petit Village, nous avons à cœur de faire revivre les aventures des célèbres Gaulois à travers des figurines uniques, 
+      fabriquées avec passion et soin. Inspirées des personnages emblématiques d'Astérix et Obélix, nos créations capturent l'essence 
+      de ces héros intemporels. Que vous soyez fan de ces aventures épiques ou nostalgique des histoires de votre enfance, nos figurines 
+      sont une invitation à replonger dans cet univers magique.
+    </p>
+  </section>
+
+  <!-- Champs de recherche et boutons de tri -->
+  <section class="mb-4 row">
+    <div class="col-md-6">
+      <input  type="text" 
+      class="form-control" 
+      placeholder="Rechercher un produit..." 
+      (input)="updateSearchTerm($event)" /> <!--lier événement et methode-->
+    </div>
+    <div class="col-md-6 text-right">
+      <button class="btn btn-danger" (click)="sortOrder = 'asc'">Prix Croissant</button>
+      <button class="btn btn-warning" (click)="sortOrder = 'desc'">Prix Décroissant</button>
+    </div>
+  </section>
+
+  <!-- Catalogue des produits -->
+  <section class="row">
+    <div class="col-md-4" *ngFor="let product of products | search: searchTerm | sort: sortOrder">
+      <div class="card mb-4">
+        <!-- Utilisation directe du chemin -->
+        <img [src]="'/' + product.image" class="card-image" alt="{{ product.name }}" />
+        <div class="card-body">
+          <h3 class="card-name">{{ product.name }}</h3>
+        <p class="card-price">{{ product.price | currency: 'EUR' }}</p>
+        <p class="card-description">{{ product.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

@@ -1,0 +1,30 @@
+footer {
+  background-color:#FDD90B ;
+  color: var(--color-dark);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+  
+.footer-text {
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif;
+  color:#DA001E;
+}
+  
+.social-media {
+  margin-top: 10px;
+}
+  
+.social-icon {
+  margin: 0 10px;
+}
+  
+.social-icon img {
+  width: 50px; 
+  height: 50px;
+}
+  
+.social-icon:hover img {
+  transform: scale(1.1); /* Effet de zoom au survol */
+}

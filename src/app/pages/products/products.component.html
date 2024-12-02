@@ -1,0 +1,21 @@
+<div class="container mt-4 product-container">
+  <!-- Titre et texte -->
+  <h1>Nos Figurines Gauloises - L'art de la nostalgie</h1>
+  <p>
+    Découvrez notre gamme exclusive de figurines artisanales, fabriquées avec un soin exceptionnel 
+    pour capturer chaque détail des personnages que vous aimez. Chaque figurine est une œuvre d'art 
+    qui raconte une partie de l'histoire des irréductibles Gaulois, prête à trouver sa place dans votre collection.
+  </p>
+
+  <!-- produits -->
+  <div class="product-grid">
+    <div *ngFor="let product of products">
+      <img [src]="'/' + product.image" class="card-image" [alt]="product.name">
+      <div class="card-body">
+        <h3 class="card-name">{{ product.name }}</h3>
+        <p class="card-price">{{ product.price | currency: 'EUR' }}</p>
+        <p class="card-description">{{ product.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
